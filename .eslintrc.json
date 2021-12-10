@@ -1,0 +1,70 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "rules": {
+    "jsx-a11y/href-no-hash": ["off"],
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "max-len": [
+      "warn",
+      {
+        "code": 80,
+        "tabWidth": 2,
+        "comments": 80,
+        "ignoreComments": false,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "radix": "off",
+    "comma-dangle": ["error", "never"],
+    "consistent-return": "off",
+    "linebreak-style": "off",
+    "func-names": "off",
+    "guard-for-in": ["warn"],
+    "import/newline-after-import": "off",
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "no-console": ["warn", { "allow": ["error", "info"] }],
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }],
+    "no-param-reassign": ["error", { "props": false }],
+    "no-plusplus": "off",
+    "no-underscore-dangle": ["off"],
+    "no-use-before-define": ["error", { "functions": false }],
+    "padding-line-between-statements": ["error",
+      { "blankLine": "always", "prev": "block", "next": "*" },
+      { "blankLine": "always", "prev": "function", "next": "*" },
+      { "blankLine": "always", "prev": "cjs-export", "next": "*" },
+      { "blankLine": "always", "prev": ["*"], "next": "cjs-export" },
+      { "blankLine": "always", "prev": "for", "next": "*" },
+      { "blankLine": "always", "prev": "expression", "next": "if" },
+      { "blankLine": "always", "prev": "cjs-import", "next": "*" },
+      { "blankLine": "always", "prev": "expression", "next": "multiline-expression" },
+      { "blankLine": "always", "prev": "multiline-expression", "next": "*" },
+      { "blankLine": "never", "prev": "cjs-import", "next": ["const", "let", "var"] },
+      { "blankLine": "never", "prev": ["const", "let", "var"], "next": "cjs-import" }
+    ],
+    "require-await": ["error"]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ],
+        "paths": ["src"]
+      }
+    }
+  }
+}
